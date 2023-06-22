@@ -7,7 +7,7 @@ const {
   updateStatusContact,
 } = require("./contacts/contacts");
 
-const { register, login } = require("./auth/auth");
+const { register, login, getCurrent, logout } = require("./auth/auth");
 
 module.exports = {
   getAll,
@@ -18,4 +18,6 @@ module.exports = {
   updateStatusContact,
   register,
   login,
+  getCurrent,
+  logout,
 };
