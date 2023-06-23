@@ -8,7 +8,6 @@ const { contactsSchemas } = require("../../models");
 
 const ctrl = require("../../controllers");
 
-// router.get("/", ctrl.getAll);
 router.get("/", authenticate, ctrl.getAll);
 
 router.get("/:contactId", authenticate, isValidId, ctrl.getById);

@@ -12,8 +12,11 @@ router.post(
 );
 
 router.post("/login", validateBody(userSchemas.loginSchema), ctrl.login);
+
 router.get("/current", authenticate, ctrl.getCurrent);
+
 router.post("/logout", authenticate, ctrl.logout);
+
 router.patch(
   "/",
   authenticate,

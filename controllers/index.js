@@ -1,3 +1,19 @@
+// const {
+//   getAll,
+//   getById,
+//   addContact,
+//   updateContactById,
+//   deleteContactById,
+//   updateStatusContact,
+// } = require("./contacts/contacts");
+
+// const { getAll } = require("./contacts/getAll");
+// const { getById } = require("./contacts/getById");
+// const { addContact } = require("./contacts/addContact");
+// const { deleteContactById } = require("./contacts/deleteContactById");
+// const { updateContactById } = require("./contacts/updateContactById");
+// const { updateStatusContact } = require("./contacts/updateStatusContact");
+
 const {
   getAll,
   getById,
@@ -5,7 +21,7 @@ const {
   updateContactById,
   deleteContactById,
   updateStatusContact,
-} = require("./contacts/contacts");
+} = require("./contacts");
 
 const {
   register,
@@ -13,7 +29,7 @@ const {
   getCurrent,
   logout,
   subscriptionUpdate,
-} = require("./auth/auth");
+} = require("./users");
 
 module.exports = {
   getAll,
