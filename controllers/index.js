@@ -29,6 +29,7 @@ const {
   getCurrent,
   logout,
   subscriptionUpdate,
+  updateAvatar,
 } = require("./users");
 
 module.exports = {
@@ -43,4 +44,5 @@ module.exports = {
   getCurrent,
   logout,
   subscriptionUpdate,
+  updateAvatar,
 };
