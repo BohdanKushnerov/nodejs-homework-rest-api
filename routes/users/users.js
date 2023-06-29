@@ -24,11 +24,9 @@ router.patch(
   ctrl.subscriptionUpdate
 );
 
-router.post(
+router.patch(
   "/avatars",
   authenticate,
-  // чи треба
-  // validateBody(userSchemas.uploadAvatarSchema),
   upload.single("avatar"),
   ctrl.updateAvatar
 );

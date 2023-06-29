@@ -46,15 +46,10 @@ const subscriptionSchema = Joi.object({
   subscription: Joi.string().valid("starter", "pro", "business"),
 });
 
-const uploadAvatarSchema = Joi.object({
-  avatar: Joi.string().required(),
-});
-
 const userSchemas = {
   registerSchema,
   loginSchema,
   subscriptionSchema,
-  uploadAvatarSchema,
 };
 
 const User = model("user", userSchema);
