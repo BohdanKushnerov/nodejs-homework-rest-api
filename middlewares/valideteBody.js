@@ -10,19 +10,28 @@ const validateBody = (schema) => async (req, res, next) => {
 
   if (error && path === "/:contactId" && method === "PUT") {
     next(HttpError(400, "Missing fields"));
-  }
-  if (
+  } else if (
     error &&
     baseUrl === "/api/contacts" &&
     path === "/:contactId/favorite" &&
     method === "PATCH"
   ) {
     next(HttpError(400, "Missing field favorite"));
-  }
-  if (error && baseUrl === "/users" && path === "/" && method === "PATCH") {
+  } else if (
+    error &&
+    baseUrl === "/users" &&
+    path === "/" &&
+    method === "PATCH"
+  ) {
     next(HttpError(400, "Missing field subscription"));
-  }
-  if (error) {
+  } else if (
+    error &&
+    baseUrl === "/users" &&
+    path === "/verify" &&
+    method === "POST"
+  ) {
+    next(HttpError(400, "Missing required field email"));
+  } else if (error) {
     next(HttpError(400, "Missing required name field"));
   }
   next();
