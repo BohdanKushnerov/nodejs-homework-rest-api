@@ -30,6 +30,8 @@ const {
   logout,
   subscriptionUpdate,
   updateAvatar,
+  verifyEmail,
+  resendVerifyEmail,
 } = require("./users");
 
 module.exports = {
@@ -45,4 +47,6 @@ module.exports = {
   logout,
   subscriptionUpdate,
   updateAvatar,
+  verifyEmail,
+  resendVerifyEmail,
 };
